@@ -1,0 +1,234 @@
+/* ======= PALETA DE COLORES ======= */
+:root {
+    --fondo-principal: #0A0E27;
+    --fondo-secundario: #0D0D0D;
+    --acento-principal: #007BFF;
+    --acento-secundario: #0004ff;
+    --acento-contraste: #FF6B35;
+    --texto-principal: #FFFFFF;
+    --texto-secundario: #B0B3C0;
+  }
+  
+  /* ======= RESETEO ======= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+  }
+  
+  /* ======= NAVBAR ======= */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fondo-secundario);
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--acento-principal);
+  }
+  
+  .logo span {
+    color: var(--acento-contraste);
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar li {
+    margin-left: 2rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: var(--acento-secundario);
+  }
+  
+  /* ======= HERO ======= */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, var(--fondo-secundario), var(--fondo-principal));
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero h2 span {
+    color: var(--acento-secundario);
+  }
+  
+  .hero p {
+    color: var(--texto-secundario);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-inline: auto;
+  }
+  
+  .btn {
+    background-color: var(--acento-principal);
+    color: #fff;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--acento-secundario);
+    color: #000;
+    box-shadow: 0 0 15px var(--acento-secundario);
+  }
+  
+  /* ======= SOBRE MÍ ======= */
+  .about {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--fondo-secundario);
+  }
+  
+  .about h2 {
+    color: var(--acento-principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about p {
+    color: var(--texto-secundario);
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+  }
+  
+  /* ======= PROYECTOS ======= */
+  .projects {
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    color: var(--acento-principal);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: var(--fondo-secundario);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px var(--acento-principal);
+  }
+  
+  .project-card h3 {
+    color: var(--acento-secundario);
+    margin-bottom: 1rem;
+  }
+  
+  .project-card p {
+    color: var(--texto-secundario);
+    line-height: 1.6;
+  }
+  
+  /* ======= CONTACTO ======= */
+  .contact {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: var(--fondo-secundario);
+  }
+  
+  .contact h2 {
+    color: var(--acento-principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact p {
+    color: var(--texto-secundario);
+    margin-bottom: 2rem;
+  }
+  
+  /* ======= FOOTER ======= */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--fondo-secundario);
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+  }
+  
+  /* ======= ANIMACIONES ======= */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ======= RESPONSIVE ======= */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
