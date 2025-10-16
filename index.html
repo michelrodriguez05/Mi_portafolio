@@ -1,71 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio de Michel Rodrigue</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Michel Rodriguez - Portafolio</title>
+
+  <!-- Fonts & icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="./main.js" crossorigin="anonymous"></script>
+  <!-- (Si no tienes kit de FontAwesome, use el CDN básico:) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
+
+  <!-- NAV -->
   <header class="navbar">
-    <h1 class="logo">M<span>R</span></h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <div class="logo" onclick="scrollToSection('sobre-mi')">M<span>R</span></div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h2>Hola, soy <span>Michel Rodrigue</span></h2>
-      <p>Desarrolladora Fullstack con pasión por el diseño web y la tecnología.</p>
-      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Hola, soy <span>Michel Rodriguez</span></h1>
+        Desarrolladora <strong>Fullstack</strong> con pasión por crear <strong>experiencias digitales modernas, interactivas y funcionales</strong>.  
+    Me encanta convertir ideas en productos reales, fusionando <strong>diseño, código y creatividad</strong> para lograr interfaces limpias, dinámicas y atractivas.
+        <div class="hero-cta">
+          <a class="btn" href="#proyectos">Ver proyectos</a>
+          <a class="btn ghost" href="#contacto">Contáctame</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- imagen de ejemplo: reemplaza por /assets/your-photo.jpg -->
+        <img src="../img/Imagen_cv.webp" alt="Foto de Michel (ejemplo)">
+      </div>
     </div>
   </section>
 
-  <!-- ===== SOBRE MÍ ===== -->
+  <!-- SOBRE MÍ -->
   <section id="sobre-mi" class="about">
-    <h2>Sobre mí</h2>
-    <p>Soy una desarrolladora en formación con experiencia en proyectos web, interfaces modernas y consumo de APIs. Me apasiona crear soluciones dinámicas y visualmente atractivas.</p>
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <p>
+    Soy <strong>Michel Rodriguez</strong>, una desarrolladora <strong>Fullstack</strong> Interesada en la tecnología, el diseño y las experiencias digitales que conectan con las personas.  
+    Me encanta combinar la lógica de la programación con la creatividad visual para construir sitios web modernos, dinámicos e intuitivos.  
+  </p>
+  <p>
+    A lo largo de mis proyectos he trabajado con <strong>HTML, CSS, JavaScript, Node.js y MySQL</strong>, creando desde sistemas de gestión hasta tiendas online interactivas.  
+    Disfruto aprender nuevas tecnologías, resolver desafíos y trabajar en equipo para convertir ideas en productos reales y funcionales.
+  </p>
+  <p>
+    Mi objetivo es seguir creciendo como desarrolladora, aportando innovación, empatía y detalle en cada línea de código que escribo.
+  </p>
+    </div>
   </section>
 
-  <!-- ===== PROYECTOS ===== -->
-  <section id="proyectos" class="projects">
-    <h2>Proyectos</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Rico Mi Pan</h3>
-        <p>Sistema de gestión para panadería con inventario y pedidos.</p>
-      </div>
-      <div class="project-card">
-        <h3>XXOPIN</h3>
-        <p>Tienda online con carrito de compras y filtrado dinámico.</p>
-      </div>
-      <div class="project-card">
-        <h3>Deezer API</h3>
-        <p>Aplicación musical que consume datos desde una API pública.</p>
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="skills">
+    <div class="container">
+      <h2>Lenguajes y tecnologías</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express</div>
+        <div class="skill">MySQL</div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACTO ===== -->
-  <section id="contacto" class="contact">
-    <h2>Contacto</h2>
-    <p>¿Quieres colaborar o saber más de mi trabajo? ¡Hablemos!</p>
-    <a href="mailto:michelrodrigue.dev@gmail.com" class="btn">Enviar correo</a>
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-img" style="background-image:url('./img/pan.jpg')"></div>
+          <div class="project-body">
+            <h3>Delicias Caceras</h3>
+            <p>Sistema de gestión para panadería (inventario y pedidos).</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/michelrodriguez05/pan" target="_blank" rel="noopener">Ver proyecto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="project-body">
+            <h3>XXOPIN</h3>
+            <p>Tienda online con carrito de compras y filtrado dinámico.</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://example.com/xxopin" target="_blank" rel="noopener">Ver proyecto</a>
+              
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="project-body">
+            <h3>Deezer API</h3>
+            <p>App musical que consume una API pública y muestra canciones/álbumes.</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://example.com/deezer-app" target="_blank" rel="noopener">Ver proyecto</a>
+              
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Michel Rodrigue | Desarrolladora Fullstack</p>
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="container contact-wrap">
+      <!-- FORM -->
+      <form id="contact-form" class="contact-form">
+        <h2>¡Hablemos!</h2>
+        <p class="muted">Completa el formulario y te responderé pronto.</p>
+
+        <input type="text" name="user_name" placeholder="Nombre completo" required>
+        <input type="email" name="user_email" placeholder="Correo electrónico" required>
+        <input type="text" name="subject" placeholder="Asunto" required>
+        <textarea name="message" placeholder="Tu mensaje..." rows="5" required></textarea>
+
+        <button type="submit" class="btn submit">Enviar mensaje</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+
+      <!-- CONTACT INFO + ICONS -->
+      <aside class="contact-info">
+        <div class="info-card">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:michelrubio570@gmail.com">michelrubio570@gmail.com</a>
+        </div>
+
+        <div class="info-card">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/michelrodriguez05" target="_blank" rel="noopener">github.com/michelrodriguez05</a>
+        </div>
+
+        <div class="info-card">
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/michel-lorena-rodriguez-rubio-b6566b37a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">linkedin.com/in/michel-lorena-rodriguez</a>
+        </div>
+
+        <p class="muted small">También puedes usar los botones en los proyectos para ver demos reales.</p>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Michel Rodrigue — Desarrolladora Fullstack</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- EmailJS (lib) -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- Tu script -->
+  <script src="./main.js"></script>
 </body>
 </html>
