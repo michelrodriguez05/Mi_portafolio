@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function(){
     // Enviar usando sendForm (usa los names del formulario)
     emailjs.sendForm("service_w779q0c", "template_2up3d5t", this)
       .then(function(){
-        status.textContent = "✅ ¡Mensaje enviado con éxito!";
+        status.textContent = "¡Mensaje enviado!";
         form.reset();
         submitBtn.disabled = false;
         submitBtn.style.opacity = "1";
       }, function(err){
         console.error("EmailJS error:", err);
-        status.textContent = "❌ Ocurrió un error. Intenta nuevamente.";
+        status.textContent = "Ocurrió un error. Intenta nuevamente.";
         submitBtn.disabled = false;
         submitBtn.style.opacity = "1";
       });
